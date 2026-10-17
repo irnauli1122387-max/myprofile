@@ -1,55 +1,99 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <body><h1> Halooooo, Selamat Datang </h1></body>
-    </head>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My Profile </title>
+    <title>Profil Irnauli Hasibuan</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9; /* Latar belakang halaman polos */
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
         }
 
-        .kotak-transparan {
-            /* Warna latar belakang HANYA untuk dalam kotak (Merah semi-transparan) */
-            /* Nilai 0.3 adalah tingkat transparansinya (0 = bening, 1 = pekat) */
-            background-color: rgba(255, 0, 0, 0.3); 
-            
-            /* Warna teks di dalam kotak */
-            color: #8b0000; 
+        /* Wadah Utama */
+        .container {
+            width: 100%;
+            max-width: 700px;
+        }
 
-            /* Tata letak dan garis tepi kotak */
-            border: 2px solid rgba(255, 0, 0, 0.5);
+        /* Bagian Atas: Header Selamat Datang & Foto */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* Foto Profil Bulat */
+        .foto-profil {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Membuat foto jadi berbentuk bulat */
+            object-fit: cover;   /* Memastikan gambar tidak terdistorsi */
+            border: 3px solid #764ba2;
+        }
+
+        /* Kotak Berwarna Transparan (Di Bawah) */
+        .kotak-transparan {
+            background-color: rgba(118, 75, 162, 0.15); /* Warna ungu transparan */
+            border: 2px solid rgba(118, 75, 162, 0.4);
             border-radius: 12px;
             padding: 24px;
-            max-width: 400px;
-            text-align: center;
+            color: #333;
+        }
+
+        .kotak-transparan h2 {
+            margin-top: 0;
+            color: #512b81;
+        }
+
+        .kotak-transparan p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .info-diri {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .info-diri p {
+            margin: 8px 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="kotak-transparan">
-        <h2 style="margin-top:0;">Judul Kotak</h2>
-         <p>
-      Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan github, pantau terus perjalanan saya di sini.
-    </p>
+    <div class="container">
+        <!-- BARIS ATAS: Selamat Datang & Foto Bulat Sejajar -->
+        <div class="header">
+            <h1>Halooooo, Selamat Datang</h1>
+            <!-- Ganti 'foto.jpg' dengan nama/jalur file foto Anda -->
+            <img src="foto.jpg" alt="Foto Irnauli Hasibuan" class="foto-profil">
+        </div>
+
+        <!-- BARIS BAWAH: Kotak Transparan -->
+        <div class="kotak-transparan">
+            <h2>Judul Kotak</h2>
+            <p>Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan GitHub, pantau terus perjalanan saya di sini.</p>
+
+            <div class="info-diri">
+                <p>Nama : Irnauli Hasibuan</p>
+                <p>NPM : 248160064</p>
+            </div>
+        </div>
     </div>
 
 </body>
-</html>
-  <head>
-  <body>
-    <img src="foto.jpg.jpeg" height="100" width="110" vspace="5" hspace="5" alt="Deskripsi Foto">
-      <h1> Nama  : Irnauli Hasibuan </h1>
-      <h1> NPM   : 248160064 </h1>
-  </body>
 </html>
