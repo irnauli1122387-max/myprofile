@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotak Transparan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Latar belakang berwarna/bergambar agar efek transparan terlihat jelas */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .kotak-transparan {
+            /* Warna latar belakang dengan transparansi (RGBA) */
+            /* Angka 0.25 adalah tingkat transparansi (0 = bening, 1 = pekat) */
+            background-color: rgba(255, 255, 255, 0.2); 
+            
+            /* Efek buram di belakang kotak (Glassmorphism) */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            /* Dekorasi kotak */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+        }
+
+        .kotak-transparan h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .kotak-transparan p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kotak-transparan">
+        <h2>Judul di Dalam Kotak</h2>
+        <p>Ini adalah contoh kata-kata di dalam kotak berwarna yang memiliki efek transparan. Anda bisa menyesuaikan warna dan tingkat transparansinya sesuai kebutuhan.</p>
+    </div>
+
+</body>
+</html>
+  <head>
     <title> My Profile </title>
   </head>
   <body>
     <h1> Halooooo, Selamat Datang </h1>
     <p>
-      Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengaan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan github, pantau terus perjalanan saya di sini.
+      Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan github, pantau terus perjalanan saya di sini.
     </p>
     <img src="foto.jpg.jpeg" height="100" width="110" vspace="5" hspace="5" alt="Deskripsi Foto">
       <h1> Nama  : Irnauli Hasibuan </h1>
