@@ -3,60 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Ringkas</title>
+    <title>Profil Irnauli Hasibuan</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            padding: 40px;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
         }
 
-        /* Container utama menggunakan Flexbox */
-        .profil-container {
-            display: flex; /* Membuat teks dan foto sejajar samping-sampingan */
-            justify-content: space-between; /* Teks di kiri, foto di kanan */
-            align-items: center; /* Menyejajarkan teks dan foto secara vertikal di tengah */
+        /* Wadah Utama */
+        .cv-container {
+            width: 100%;
             max-width: 700px;
-            margin: 0 auto;
         }
 
-        .teks-kiri {
-            flex: 1; /* Mengisi sisa ruang di sebelah kiri */
-            padding-right: 20px; /* Jarak antara teks dan foto */
+        /* BARIS ATAS: Kunci Agar "Selamat Datang" Sejajar Sempurna Dengan Foto */
+        .header-top {
+            display: flex;
+            justify-content: space-between; /* Selamat datang di kiri, foto di kanan */
+            align-items: center;            /* Sejajar secara horizontal/vertikal */
+            border-bottom: 2px solid #000000; /* Garis pembatas atas */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
         }
 
-        .teks-kiri h1 {
-            margin-top: 0;
-            font-size: 24px;
+        /* Menghilangkan margin bawaan tag <h1> agar lurus dengan foto */
+        .header-top h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
         }
 
-        .teks-kiri p {
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-
-        /* Style untuk membuat foto berbentuk bulat */
+        /* Foto Profil Bulat Sempurna */
         .foto-bulat {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* Trik utama membuat gambar jadi bulat sempurna */
-            object-fit: cover; /* Agar gambar tidak terdistorsi/gepeng */
-            flex-shrink: 0; /* Mencegah foto menciut jika layar mengecil */
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Membuat gambar menjadi bulat */
+            object-fit: cover;   /* Mencegah gambar gepeng */
+            border: 2px solid #000000;
+            flex-shrink: 0;      /* Agar foto tidak mengecil saat layar HP */
+        }
+
+        /* KONTEN BAWAH: Semua teks/biodata berada di bawah baris atas */
+        .konten {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .deskripsi {
+            margin-bottom: 30px;
+        }
+
+        /* Format untuk Biodata Diri */
+        .biodata-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            row-gap: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="profil-container">
-        <!-- Teks di sebelah kiri -->
-        <div class="teks-kiri">
+    <div class="cv-container">
+        
+        <!-- BAGIAN ATAS: Foto Bulat & Selamat Datang Sejajar (Flexbox) -->
+        <div class="header-top">
             <h1>Halooooo, Selamat Datang</h1>
-            <p>Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan GitHub, pantau terus perjalanan saya di sini.</p>
-            <p><strong>Nama :</strong> Irnauli Hasibuan</p>
-            <p><strong>NPM :</strong> 248160064</p>
+            <!-- Ganti 'foto.jpg' dengan file foto asli Anda (misalnya foto_anda.jpg) -->
+            <img src="foto.jpg" alt="Foto Irnauli" class="foto-bulat">
         </div>
 
-        <!-- Foto di sebelah kanan -->
-        <img src="foto.jpg.jpeg" alt="Foto Profil" class="foto-bulat">
+        <!-- BAGIAN BAWAH: Penjelasan & Biodata -->
+        <div class="konten">
+            
+            <!-- Deskripsi -->
+            <div class="deskripsi">
+                <p>Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan github, pantau terus perjalanan saya di sini.</p>
+            </div>
+
+            <!-- Detail Biodata -->
+            <div>
+                <div class="biodata-title">Biodata Diri</div>
+                <div class="info-grid">
+                    <div class="info-label">Nama</div>
+                    <div>: Irnauli Hasibuan</div>
+
+                    <div class="info-label">NPM</div>
+                    <div>: 248160064</div>
+
+                    <div class="info-label">Prodi</div>
+                    <div>: Teknik Informatika</div>
+
+                    <div class="info-label">Kampus</div>
+                    <div>: Universitas Medan Area</div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
