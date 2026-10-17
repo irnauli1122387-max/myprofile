@@ -1,57 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kotak Transparan</title>
+    <title>Kotak Berwarna Transparan</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Latar belakang berwarna/bergambar agar efek transparan terlihat jelas */
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Latar belakang halaman polos */
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             margin: 0;
         }
 
         .kotak-transparan {
-            /* Warna latar belakang dengan transparansi (RGBA) */
-            /* Angka 0.25 adalah tingkat transparansi (0 = bening, 1 = pekat) */
-            background-color: rgba(255, 255, 255, 0.2); 
+            /* Warna latar belakang HANYA untuk dalam kotak (Merah semi-transparan) */
+            /* Nilai 0.3 adalah tingkat transparansinya (0 = bening, 1 = pekat) */
+            background-color: rgba(255, 0, 0, 0.3); 
             
-            /* Efek buram di belakang kotak (Glassmorphism) */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            /* Warna teks di dalam kotak */
+            color: #8b0000; 
 
-            /* Dekorasi kotak */
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 30px;
+            /* Tata letak dan garis tepi kotak */
+            border: 2px solid rgba(255, 0, 0, 0.5);
+            border-radius: 12px;
+            padding: 24px;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-            color: #ffffff;
-        }
-
-        .kotak-transparan h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        .kotak-transparan p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
 
     <div class="kotak-transparan">
-        <h2>Judul di Dalam Kotak</h2>
-        <p>Ini adalah contoh kata-kata di dalam kotak berwarna yang memiliki efek transparan. Anda bisa menyesuaikan warna dan tingkat transparansinya sesuai kebutuhan.</p>
+        <h2 style="margin-top:0;">Judul Kotak</h2>
+        <p>Kata-kata di dalam kotak. Kotak ini menggunakan warna merah yang transparan, sehingga warna di dalam kotak terlihat samar-samar.</p>
     </div>
 
 </body>
