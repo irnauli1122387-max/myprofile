@@ -3,96 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Irnauli Hasibuan</title>
+    <title>Profil Ringkas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
+            padding: 40px;
         }
 
-        /* Wadah Utama */
-        .container {
-            width: 100%;
+        /* Container utama menggunakan Flexbox */
+        .profil-container {
+            display: flex; /* Membuat teks dan foto sejajar samping-sampingan */
+            justify-content: space-between; /* Teks di kiri, foto di kanan */
+            align-items: center; /* Menyejajarkan teks dan foto secara vertikal di tengah */
             max-width: 700px;
+            margin: 0 auto;
         }
 
-        /* Bagian Atas: Header Selamat Datang & Foto */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
+        .teks-kiri {
+            flex: 1; /* Mengisi sisa ruang di sebelah kiri */
+            padding-right: 20px; /* Jarak antara teks dan foto */
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #333;
-        }
-
-        /* Foto Profil Bulat */
-        .foto-profil {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; /* Membuat foto jadi berbentuk bulat */
-            object-fit: cover;   /* Memastikan gambar tidak terdistorsi */
-            border: 3px solid #764ba2;
-        }
-
-        /* Kotak Berwarna Transparan (Di Bawah) */
-        .kotak-transparan {
-            background-color: rgba(118, 75, 162, 0.15); /* Warna ungu transparan */
-            border: 2px solid rgba(118, 75, 162, 0.4);
-            border-radius: 12px;
-            padding: 24px;
-            color: #333;
-        }
-
-        .kotak-transparan h2 {
+        .teks-kiri h1 {
             margin-top: 0;
-            color: #512b81;
+            font-size: 24px;
         }
 
-        .kotak-transparan p {
+        .teks-kiri p {
             line-height: 1.6;
-            font-size: 16px;
+            margin-bottom: 8px;
         }
 
-        .info-diri {
-            margin-top: 15px;
-            font-weight: bold;
-            color: #222;
-        }
-
-        .info-diri p {
-            margin: 8px 0;
+        /* Style untuk membuat foto berbentuk bulat */
+        .foto-bulat {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Trik utama membuat gambar jadi bulat sempurna */
+            object-fit: cover; /* Agar gambar tidak terdistorsi/gepeng */
+            flex-shrink: 0; /* Mencegah foto menciut jika layar mengecil */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- BARIS ATAS: Selamat Datang & Foto Bulat Sejajar -->
-        <div class="header">
+    <div class="profil-container">
+        <!-- Teks di sebelah kiri -->
+        <div class="teks-kiri">
             <h1>Halooooo, Selamat Datang</h1>
-            <!-- Ganti 'foto.jpg' dengan nama/jalur file foto Anda -->
-            <img src="foto.jpg" alt="Foto Irnauli Hasibuan" class="foto-profil">
-        </div>
-
-        <!-- BARIS BAWAH: Kotak Transparan -->
-        <div class="kotak-transparan">
-            <h2>Judul Kotak</h2>
             <p>Saya adalah Irnauli Hasibuan, Mahasiswa di Universitas Medan Area dengan prodi Teknik Informatika. Saat ini saya sedang belajar menggunakan GitHub, pantau terus perjalanan saya di sini.</p>
-
-            <div class="info-diri">
-                <p>Nama : Irnauli Hasibuan</p>
-                <p>NPM : 248160064</p>
-            </div>
+            <p><strong>Nama :</strong> Irnauli Hasibuan</p>
+            <p><strong>NPM :</strong> 248160064</p>
         </div>
+
+        <!-- Foto di sebelah kanan -->
+        <img src="foto.jpg.jpeg" alt="Foto Profil" class="foto-bulat">
     </div>
 
 </body>
