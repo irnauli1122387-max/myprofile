@@ -17,12 +17,28 @@
             padding: 40px 20px;
             display: flex;
             justify-content: center;
+
+            /* SETTING GAMBAR BACKGROUND UTAMA SELEBAR LAYAR */
+            background-image: url('gambarit.jpg'); /* Sesuaikan dengan nama file gambar Anda */
+            background-size: cover;             /* Memenuhi seluruh layar tanpa terputus */
+            background-position: center;        /* Posisi tengah gambar */
+            background-repeat: no-repeat;       /* Gambar tidak mengulang */
+            background-attachment: fixed;       /* Gambar tetap saat di-scroll */
         }
 
         /* Wadah Utama */
         .cv-container {
             width: 100%;
             max-width: 700px;
+
+            /* Latar gelap transparan agar tulisan sangat jelas di atas gambar */
+            background: rgba(15, 23, 42, 0.75); 
+            backdrop-filter: blur(10px); /* Efek buram di belakang kaca */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
         /* BARIS ATAS: Kunci Agar "Selamat Datang" Sejajar Sempurna Dengan Foto */
@@ -50,7 +66,7 @@
             height: 100px;
             border-radius: 50%; /* Membuat gambar menjadi bulat */
             object-fit: cover;   /* Mencegah gambar gepeng */
-            border: 2px solid #000000;
+            border: 3px solid #38bdf8;
             flex-shrink: 0;      /* Agar foto tidak mengecil saat layar HP */
         }
 
@@ -66,15 +82,16 @@
 
         /* Format untuk Biodata Diri */
         .tambahan-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
-            border-radius: 6px;        /* Bikin sudutnya melengkung halus */
-            border-bottom: 1px solid #ccc;
+            /* UBAH / TAMBAHKAN BAGIAN INI */
+            color: #38bdf8;                  /* Warna teks cyan */
+            border-bottom: 2px solid #38bdf8; /* Garis bawah cyan */
             padding-bottom: 5px;
             margin-bottom: 15px;
             margin-top: 35px;
-            background-color: #1e293b;
+            display: inline-block;
             
         }
     </style>
@@ -85,7 +102,7 @@
         
         <!-- BAGIAN ATAS: Foto Bulat & Selamat Datang Sejajar (Flexbox) -->
         <div class="header-top">
-            <h1 style="color: white"; >Halooooo, Selamat Datang</h1>
+            <h1 style="color: #38bdf8"; >Halooooo, Selamat Datang</h1>
             <img src="foto.jpg.jpeg" alt="Foto Irnauli" class="foto-bulat">
         </div>
 
@@ -99,7 +116,7 @@
 
             <!-- Detail Biodata -->
             <div>
-                <div style="color: white"; class="tambahan-title">Pengalaman</div>
+                <div style="color: #38bdf8"; class="tambahan-title">Pengalaman</div>
                     <div> • Himpunan Mahasiswa Informatika (hmif) 2026 - Anggota Divisi Pengembangan Minat dan Bakat </div>
                     <div> • Panitia Malam Akrab hmif 2026 - Anggota Divisi Konsumsi </div>
                     <div> • Lomba essay LEON 2026 - Peserta </div>
@@ -107,7 +124,7 @@
             </div>
                 
             <div>
-                <div style="color: white"; class="tambahan-title">Skill</div>
+                <div style="color: #38bdf8"; class="tambahan-title">Skill</div>
                     <div> • Microsoft Office (Word, PPT, Excel) </div>
                     <div> • Java Script </div>
                     <div> • Python </div>
